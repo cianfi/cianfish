@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work in Progress</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #f9f9f9;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    h1 {
+      font-size: 5rem;
+      letter-spacing: 4px;
+      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .bar {
+      width: 300px;
+      height: 10px;
+      background: #333;
+      border-radius: 10px;
+      margin: 30px auto;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #00f260, #0575e6);
+      animation: fill 2s ease-in-out infinite;
+    }
+
+    @keyframes fill {
+      0% { width: 0; }
+      50% { width: 100%; }
+      100% { width: 0; }
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ff416c, 0 0 20px #ff4b2b;
+      }
+      to {
+        text-shadow: 0 0 20px #ff416c, 0 0 40px #ff4b2b;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>WORK IN PROGRESS</h1>
+    <div class="bar">
+      <div class="bar-fill"></div>
+    </div>
+  </div>
+</body>
+</html>
