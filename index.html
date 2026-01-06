@@ -19,13 +19,42 @@
   <header class="sticky top-0 z-50 bg-white shadow-sm">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
       <h1 class="font-semibold text-xl">CF</h1>
-      <nav class="space-x-6 text-sm font-medium">
+
+      <!-- desktop nav -->
+      <nav id="mainNav" class="hidden md:flex space-x-6 text-sm font-medium" aria-label="Main">
         <a href="#about" class="hover:text-gray-700">About</a>
+        <a href="#blog" class="hover:text-gray-700">Blog</a>
         <a href="#projects" class="hover:text-gray-700">Projects</a>
         <a href="#work" class="hover:text-gray-700">Work</a>
         <a href="#hobbies" class="hover:text-gray-700">Hobbies</a>
         <a href="#contact" class="hover:text-gray-700">Contact</a>
       </nav>
+
+      <!-- mobile toggle -->
+      <div class="md:hidden">
+        <button id="navToggle" aria-expanded="false" aria-controls="mobileNav" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <g id="hamburger">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </g>
+            <g id="close" class="hidden">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- mobile dropdown -->
+    <div id="mobileNav" class="md:hidden hidden border-t bg-white">
+      <div class="px-4 py-3 space-y-2">
+        <a href="#about" class="block py-2 text-sm font-medium hover:bg-gray-50">About</a>
+        <a href="#blog" class="block py-2 text-sm font-medium hover:bg-gray-50">Blog</a>
+        <a href="#projects" class="block py-2 text-sm font-medium hover:bg-gray-50">Projects</a>
+        <a href="#work" class="block py-2 text-sm font-medium hover:bg-gray-50">Work</a>
+        <a href="#hobbies" class="block py-2 text-sm font-medium hover:bg-gray-50">Hobbies</a>
+        <a href="#contact" class="block py-2 text-sm font-medium hover:bg-gray-50">Contact</a>
+      </div>
     </div>
   </header>
 
@@ -388,6 +417,35 @@
 
       window.addEventListener('resize', init);
       init();
+    })();
+
+    // Mobile nav toggle
+    (function(){
+      const toggle = document.getElementById('navToggle');
+      const mobile = document.getElementById('mobileNav');
+      const menuIcon = document.getElementById('menuIcon');
+      if (!toggle || !mobile || !menuIcon) return;
+      toggle.addEventListener('click', () => {
+        const isOpen = !mobile.classList.contains('hidden');
+        if (isOpen) {
+          mobile.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+          menuIcon.querySelector('#hamburger').classList.remove('hidden');
+          menuIcon.querySelector('#close').classList.add('hidden');
+        } else {
+          mobile.classList.remove('hidden');
+          toggle.setAttribute('aria-expanded', 'true');
+          menuIcon.querySelector('#hamburger').classList.add('hidden');
+          menuIcon.querySelector('#close').classList.remove('hidden');
+        }
+      });
+      // close when clicking a link
+      mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        mobile.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+        menuIcon.querySelector('#hamburger').classList.remove('hidden');
+        menuIcon.querySelector('#close').classList.add('hidden');
+      }));
     })();
   </script>
 </body>
