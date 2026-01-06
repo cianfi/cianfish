@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cian Fish — Portfolio</title>
+  <meta name="description" content="Network engineer & builder — projects, writing, and experience." />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="font-semibold text-xl">CF</h1>
+      <nav class="space-x-6 text-sm font-medium">
+        <a href="#about" class="hover:text-gray-700">About</a>
+        <a href="#projects" class="hover:text-gray-700">Projects</a>
+        <a href="#work" class="hover:text-gray-700">Work</a>
+        <a href="#hobbies" class="hover:text-gray-700">Hobbies</a>
+        <a href="#contact" class="hover:text-gray-700">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <p class="uppercase tracking-wide text-sm text-indigo-600 font-semibold">Hi — I'm Cian & Welcome to cianfish.co.uk</p>
+      <h2 class="mt-4 text-4xl md:text-5xl font-bold leading-tight">Who Am I?</h2>
+       <div class="mt-6 space-y-4 max-w-2xl mx-auto text-gray-600">
+         <p>I am a Site Reliability Engineer @ Cisco Systems. I design, build, and troubleshoot modern enterprise networks — with automation, observability and artificial intelligence in mind!</p>
+         <p>Over the last couple years, I have obtained my CCNA, DevNet Associate & DevNet Specalist. My 2026 goal is to get my full CCNP by studying for the AUTOCORE exam.</p>
+         <p>I graduated at Southampton Solent University where I obtained my bachelor degree "Computer Systems & Network Engineering". I was also awarded the British Computing Society Award!</p>
+         <p>Outside of work, I like to explore & do activities that challenge me, such as marathons and MMA.</p>
+       </div>
+      <div class="mt-8 space-x-4">
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="https://github.com/cianfi" class="px-5 py-3 rounded-2xl bg-indigo-600 text-white font-medium shadow hover:bg-indigo-700">View projects</a>
+        <a href="https://www.linkedin.com/in/cian-fish-3a826b200/" target="_blank" rel="noopener" class="px-5 py-3 rounded-2xl border border-gray-300 font-medium hover:bg-gray-100">LinkedIn</a>
+        <a href="https://www.instagram.com/cianfish/?hl=en" class="px-5 py-3 rounded-2xl border border-gray-300 font-medium hover:bg-gray-100">Instagram</a>
+      </div>
+      </div>
+    </div>
+
+    <!-- circular photo to the right -->
+    <div class="hidden md:flex justify-center">
+      <div class="w-72 h-72 rounded-full overflow-hidden bg-gray-100 shadow-lg flex items-center justify-center">
+        <img src="images/profile.jpeg" alt="Cian Fish" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blogs" class="bg-gray-50 border-t">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h3 class="text-2xl font-bold">Latest blog posts</h3>
+      <p class="text-gray-600 mt-2">I publish a short post each week about networking, automation, personal projects and goals.</p>
+
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-2xl p-6 shadow bg-white">
+          <h4 class="font-semibold text-lg">Coming Soon !</h4>
+          <!-- <p class="mt-2 text-gray-600 text-sm">Come back Sunday</p> -->
+          <!-- <a href="/blog/ansible-device-backups" class="inline-block mt-4 text-indigo-600 font-medium" target="_blank" rel="noopener">Read →</a> -->
+        </article>
+
+        <!-- <article class="rounded-2xl p-6 shadow bg-white">
+          <h4 class="font-semibold text-lg">Using Grafana alerts for network observability</h4>
+          <p class="mt-2 text-gray-600 text-sm">How I configured alerts and reduced noise while improving detection.</p>
+          <a href="/blog/grafana-network-alerts" class="inline-block mt-4 text-indigo-600 font-medium" target="_blank" rel="noopener">Read →</a>
+        </article>
+
+        <article class="rounded-2xl p-6 shadow bg-white">
+          <h4 class="font-semibold text-lg">Agentic AI for troubleshooting — notes</h4>
+          <p class="mt-2 text-gray-600 text-sm">Early experiments using LLMs to assist with network troubleshooting flows.</p>
+          <a href="/blog/agentic-ai-troubleshooting" class="inline-block mt-4 text-indigo-600 font-medium" target="_blank" rel="noopener">Read →</a>
+        </article> -->
+      </div>
+
+      <!-- <div class="mt-8">
+        <a href="/blog" class="inline-block px-5 py-3 rounded-2xl bg-indigo-600 text-white font-medium shadow hover:bg-indigo-700">View all posts</a>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="bg-white border-t">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h3 class="text-2xl font-bold">Featured projects</h3>
+      <p class="text-gray-600 mt-2">A selection of things I’ve built, broken, and improved.</p>
+
+      <div class="mt-8 relative">
+        <div id="projectCarousel" class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 no-scrollbar" tabindex="0" aria-label="Projects carousel">
+          <div class="projectCard min-w-0 snap-center rounded-2xl p-6 shadow bg-gray-50 shrink-0">
+            <h4 class="font-semibold text-lg">Network Troubleshooting utlising Agentic AI</h4>
+            <p class="mt-3 text-gray-600 text-sm">From alerts to automated remediation using SLMs, Grafana alerts, and network APIs.</p>
+            <a class="inline-block mt-4 text-indigo-600 font-medium" href="https://github.com/cianfi/university_fyp">Read more →</a>
+          </div>
+
+          <div class="projectCard min-w-0 snap-center rounded-2xl p-6 shadow bg-gray-50 shrink-0">
+            <h4 class="font-semibold text-lg">Personal Strava Recommendations utilising AI [WIP]</h4>
+            <p class="mt-3 text-gray-600 text-sm">Utilising Strava's API & Webhook capabilities, LLMs ability to generate detailed information, this project provides detailed information on your runs & recommendations for future runs.</p>
+            <a class="inline-block mt-4 text-indigo-600 font-medium" href="https://github.com/cianfi/strava">Read more →</a>
+          </div>
+
+          <div class="projectCard min-w-0 snap-center rounded-2xl p-6 shadow bg-gray-50 shrink-0">
+            <h4 class="font-semibold text-lg">Dynamic Documentation [WIP[</h4>
+            <p class="mt-3 text-gray-600 text-sm">Coming Soon...</p>
+            <a class="inline-block mt-4 text-indigo-600 font-medium" href="https://www.youtube.com/watch?v=Aq5WXmQQooo&list=RDAq5WXmQQooo&start_radio=1">Sneak Peak...</a>
+          </div>
+
+          <div class="projectCard min-w-0 snap-center rounded-2xl p-6 shadow bg-gray-50 shrink-0">
+            <h4 class="font-semibold text-lg">Configuration Backups utlising AWX</h4>
+            <p class="mt-3 text-gray-600 text-sm">Utilising AWX & Ansible to get configuration backups & storing the backups in Github</p>
+            <a class="inline-block mt-4 text-indigo-600 font-medium" href="https://github.com/cianfi/com615-awx-playbooks">Read more →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      /* project carousel — show 3 cards per view on wide screens, 2 on medium, 1 on small */
+      #projectCarousel { --gap: 1.5rem; gap: var(--gap); }
+      #projectCarousel > .projectCard { flex: 0 0 calc((100% - (var(--gap) * 2)) / 3); max-width: calc((100% - (var(--gap) * 2)) / 3); }
+      @media (max-width: 1024px) {
+        #projectCarousel > .projectCard { flex: 0 0 calc((100% - var(--gap)) / 2); max-width: calc((100% - var(--gap)) / 2); }
+      }
+      @media (max-width: 640px) {
+        #projectCarousel > .projectCard { flex: 0 0 100%; max-width: 100%; }
+      }
+    </style>
+  </section>
+
+  <!-- WORK EXPERIENCE -->
+  <section id="work" class="bg-white border-t">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h3 class="text-2xl font-bold">Work experience</h3>
+      <p class="text-gray-600 mt-2">Roles, responsibilities, and the impact I had.</p>
+
+      <div class="mt-10 space-y-6">
+        <!-- Role 1 -->
+        <div class="rounded-2xl p-6 shadow bg-gray-50">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <h4 class="font-semibold text-lg">Site Reliability Engineer Graduate</h4>
+            <span class="text-sm text-gray-500">August 2025 - Present</span>
+          </div>
+          <p class="mt-2 text-gray-600 text-sm">Cisco Systems</p>
+          <ul class="mt-4 list-disc list-inside text-gray-600 text-sm space-y-1">
+            <li>Working for the Insights & Automations team.</li>
+            <li>Focusing on network observability, network automation and AI with networks.</li>
+          </ul>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="rounded-2xl p-6 shadow bg-gray-50">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <h4 class="font-semibold text-lg">Site Reliability Engineer Intern</h4>
+            <span class="text-sm text-gray-500">July 2023 - July 2025</span>
+          </div>
+          <p class="mt-2 text-gray-600 text-sm">Cisco Systems</p>
+          <ul class="mt-4 list-disc list-inside text-gray-600 text-sm space-y-1">
+            <li>Worked for the Network Access team during my placement year & part-time during my final year of University.</li>
+            <li>Focused on deploying, maintaining and decomissioning large enterprise networks. Touched topics such as WiFi, LANs and automation</li>
+          </ul>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="rounded-2xl p-6 shadow bg-gray-50">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <h4 class="font-semibold text-lg">Network Engineer Intern</h4>
+            <span class="text-sm text-gray-500">May 2022 - May 2023</span>
+          </div>
+          <p class="mt-2 text-gray-600 text-sm">Circle Cloud</p>
+          <ul class="mt-4 list-disc list-inside text-gray-600 text-sm space-y-1">
+            <li>Worked as a network engineer / first line support engineer for summer and continued on during second year of University</li>
+            <li>Focused on deploying and maintaining small enterprise networks and maintaining SIP telephony for small enterprises</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hobbies" class="bg-gray-50 border-t">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h3 class="text-2xl font-bold">Outside of work</h3>
+      <p class="text-gray-600 mt-2">A rotating peek into the things I enjoy most.</p>
+
+      <div class="relative mt-10">
+        <div id="hobbyCarousel" class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 no-scrollbar" tabindex="0" aria-label="Hobbies carousel">
+          
+          <div class="hobbyCard min-w-0 snap-center rounded-3xl shadow bg-white overflow-hidden shrink-0">
+            <img src="images/barcelona_marathon.jpg" class="w-full h-44 object-cover" alt="Hobby image">
+            <div class="p-4">
+              <p class="font-semibold"><a href="https://www.strava.com/activities/13898048464">Barcelona Marathon 2025</a></p>
+              <p class="text-sm text-gray-600 mt-1">First ever marathon!</p>
+            </div>
+          </div>
+
+          <div class="hobbyCard min-w-0 snap-center rounded-3xl shadow bg-white overflow-hidden shrink-0">
+            <img src="images/southampton_mara.jpg" class="w-full h-44 object-cover" alt="Hobby image">
+            <div class="p-4">
+              <p class="font-semibold"><a href="https://www.strava.com/activities/14097209176">Southampton Marathon 2025</a></p>
+              <p class="text-sm text-gray-600 mt-1">One month later, second marathon!</p>
+            </div>
+          </div>
+
+          <div class="hobbyCard min-w-0 snap-center rounded-3xl shadow bg-white overflow-hidden shrink-0">
+            <img src="images/carrauntoohil.jpeg" class="w-full h-44 object-cover" alt="Hobby image">
+            <div class="p-4">
+              <p class="font-semibold"><a href="https://www.strava.com/activities/15180414023">Carrauntoohil 2025</a></p>
+              <p class="text-sm text-gray-600 mt-1">Climbed Ireland's tallest mountain!</p>
+            </div>
+          </div>
+
+          <div class="hobbyCard min-w-0 snap-center rounded-3xl shadow bg-white overflow-hidden shrink-0">
+            <img src="images/vietnam.jpeg" class="w-full h-44 object-cover" alt="Hobby image">
+            <div class="p-4">
+              <p class="font-semibold">Vietnam 2025</p>
+              <p class="text-sm text-gray-600 mt-1">Summer of 2025, decided to go to Vietnam solo for 3 weeks!</p>
+            </div>
+          </div>
+      
+          <div class="hobbyCard min-w-0 snap-center rounded-3xl shadow bg-white overflow-hidden shrink-0">
+            <img src="images/mma.jpg" class="w-full h-44 object-cover" alt="Hobby image">
+            <div class="p-4">
+              <p class="font-semibold">MMA Fight 2024</p>
+              <p class="text-sm text-gray-600 mt-1">Had one fight for charity and actively do Brazillian Jiu Jitsu!</p>
+            </div>
+          </div>
+
+          <div class="hobbyCard min-w-0 snap-center rounded-3xl shadow bg-white overflow-hidden shrink-0">
+            <img src="images/hyrox_madrid.jpg" class="w-full h-44 object-cover" alt="Hobby image">
+            <div class="p-4">
+              <p class="font-semibold">Hyrox Madrid 2024</p>
+              <p class="text-sm text-gray-600 mt-1">Trained for & completed Hyrox Madrid!</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <style>
+      /* show 3 cards per view on wide screens, 2 on medium, 1 on small */
+      #hobbyCarousel { --gap: 1rem; gap: var(--gap); }
+      #hobbyCarousel > .hobbyCard { flex: 0 0 calc((100% - (var(--gap) * 2)) / 3); max-width: calc((100% - (var(--gap) * 2)) / 3); }
+      @media (max-width: 1024px) {
+        #hobbyCarousel > .hobbyCard { flex: 0 0 calc((100% - var(--gap)) / 2); max-width: calc((100% - var(--gap)) / 2); }
+      }
+      @media (max-width: 640px) {
+        #hobbyCarousel > .hobbyCard { flex: 0 0 100%; max-width: 100%; }
+      }
+
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-gray-900 text-gray-50">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h3 class="text-2xl font-bold">Get in touch</h3>
+      <p class="mt-3 text-gray-300">I’m always happy to talk about networks, automation, or interesting opportunities.</p>
+      <div class="mt-6 flex space-x-4">
+        <a href="https://github.com/cianfi" class="inline-block px-6 py-3 rounded-2xl bg-white text-gray-900 font-medium shadow">GitHub</a>
+        <a href="https://www.linkedin.com/in/cian-fish-3a826b200/" class="inline-block px-6 py-3 rounded-2xl bg-white text-gray-900 font-medium shadow">LinkedIn</a>
+        <a href="https://www.instagram.com/cianfish/?hl=en" class="inline-block px-6 py-3 rounded-2xl bg-white text-gray-900 font-medium shadow">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center text-sm text-gray-500 py-6">
+    © <span id="year"></span> Cian Fish — Built with curiosity & eagerness to learn more!
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    (function(){
+      const container = document.getElementById('hobbyCarousel');
+      if (!container) return;
+      const originalCards = Array.from(container.querySelectorAll('.hobbyCard'));
+      if (originalCards.length === 0) return;
+
+      // clone before and after so the carousel can loop seamlessly
+      const clonesBefore = originalCards.map(c => c.cloneNode(true));
+      const clonesAfter  = originalCards.map(c => c.cloneNode(true));
+      clonesBefore.slice().reverse().forEach(c => container.insertBefore(c, container.firstChild));
+      clonesAfter.forEach(c => container.appendChild(c));
+
+      let origWidth = 0;
+      const computeOrigWidth = () => {
+        const all = container.querySelectorAll('.hobbyCard');
+        const startIndex = originalCards.length; // originals sit in the middle after cloning
+        const first = all[startIndex];
+        const last  = all[startIndex + originalCards.length - 1];
+        origWidth = (last.offsetLeft + last.offsetWidth) - first.offsetLeft;
+      };
+
+      const jump = x => {
+        const prev = container.style.scrollBehavior;
+        container.style.scrollBehavior = 'auto';
+        container.scrollLeft = x;
+        container.style.scrollBehavior = prev;
+      };
+
+      const init = () => {
+        computeOrigWidth();
+        // position in the middle (start of the original set)
+        jump(origWidth);
+      };
+
+      let rafPending = false;
+      container.addEventListener('scroll', () => {
+        if (rafPending) return;
+        rafPending = true;
+        window.requestAnimationFrame(() => {
+          const maxScroll = container.scrollWidth - container.clientWidth;
+          if (container.scrollLeft <= 0) {
+            // jumped to the start of the prepended clones => move forward by one original width
+            jump(container.scrollLeft + origWidth);
+          } else if (container.scrollLeft >= maxScroll - 1) {
+            // reached the end (appended clones) => move backward by one original width
+            jump(container.scrollLeft - origWidth);
+          }
+          rafPending = false;
+        });
+      });
+
+      window.addEventListener('resize', init);
+      init();
+    })();
+
+    (function(){
+      const container = document.getElementById('projectCarousel');
+      if (!container) return;
+      const originalCards = Array.from(container.querySelectorAll('.projectCard'));
+      if (originalCards.length === 0) return;
+
+      const clonesBefore = originalCards.map(c => c.cloneNode(true));
+      const clonesAfter  = originalCards.map(c => c.cloneNode(true));
+      clonesBefore.slice().reverse().forEach(c => container.insertBefore(c, container.firstChild));
+      clonesAfter.forEach(c => container.appendChild(c));
+
+      let origWidth = 0;
+      const computeOrigWidth = () => {
+        const all = container.querySelectorAll('.projectCard');
+        const startIndex = originalCards.length;
+        const first = all[startIndex];
+        const last  = all[startIndex + originalCards.length - 1];
+        origWidth = (last.offsetLeft + last.offsetWidth) - first.offsetLeft;
+      };
+
+      const jump = x => {
+        const prev = container.style.scrollBehavior;
+        container.style.scrollBehavior = 'auto';
+        container.scrollLeft = x;
+        container.style.scrollBehavior = prev;
+      };
+
+      const init = () => {
+        computeOrigWidth();
+        jump(origWidth);
+      };
+
+      let rafPending = false;
+      container.addEventListener('scroll', () => {
+        if (rafPending) return;
+        rafPending = true;
+        window.requestAnimationFrame(() => {
+          const maxScroll = container.scrollWidth - container.clientWidth;
+          if (container.scrollLeft <= 0) {
+            jump(container.scrollLeft + origWidth);
+          } else if (container.scrollLeft >= maxScroll - 1) {
+            jump(container.scrollLeft - origWidth);
+          }
+          rafPending = false;
+        });
+      });
+
+      window.addEventListener('resize', init);
+      init();
+    })();
+  </script>
+</body>
+</html>
